@@ -1,0 +1,66 @@
+mutation toggleChecked {
+  toggleChecked(id: "DNC3gFjRKMGwZAjJT") {
+    _id
+    text
+    createdAt
+    checked
+  }
+}
+
+mutation addTask {
+  addTask(text: "Meet Aaron") {
+    _id
+    text
+    createdAt
+    checked
+  }
+}
+
+mutation deleteTask {
+  deleteTask(id: "NYoWvGdQTnxjS9nwN")
+}
+
+query getTask {
+  getOneTask(id: "hNGEaWWreGF5ufEsc") {
+    _id
+    text
+    createdAt
+    checked
+  }
+}
+
+query getTasks {
+  getAllTasks {
+    _id
+    text
+    createdAt
+    checked
+  }
+}
+
+query getIncompleteCount {
+  getIncompleteTasksCount
+}
+
+query getAuthor{
+  getOneAuthor(firstName: "Edmond", lastName: "Jones") {
+    firstName
+    lastName
+    posts {
+      title
+      views
+    }
+  }
+  getFortuneCookie
+}
+
+query getAuthors {
+  getAllAuthors {
+    firstName
+    lastName
+  }
+}
+
+query getCookie {
+  getFortuneCookie
+}
